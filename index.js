@@ -110,7 +110,7 @@ function baiTap5(array) {
         }
     }
     var divResult = document.getElementById("ketQua5");
-    divResult.innerHTML = `Số chẵn cuối cùng ${lastEvenNumber}`;
+    divResult.innerHTML = `Số chẵn cuối cùng: ${lastEvenNumber}`;
 }
 
 
@@ -124,7 +124,7 @@ function baiTap6() {
     number[n] = temp
 
     var divResult = document.getElementById("ketQua6")
-    divResult.innerHTML = ` Mảng sau khi đổi ${number}`
+    divResult.innerHTML = ` Mảng sau khi đổi: ${number}`
     localStorage.setItem('number', JSON.stringify(number));
     display(number)
 
@@ -133,7 +133,7 @@ function baiTap6() {
 function baiTap7() {
     number.sort(compare)
     var divResult = document.getElementById("ketQua7")
-    divResult.innerHTML = ` Mảng sau khi sắp xếp ${number}`
+    divResult.innerHTML = ` Mảng sau khi sắp xếp: ${number}`
     localStorage.setItem('number', JSON.stringify(number));
     display(number)
 }
@@ -217,14 +217,14 @@ function baiTap10(array) {
     console.log(positive, negative)
     if (positive > negative) {
         var divResult = document.getElementById("ketQua10")
-        divResult.innerHTML = `Số dương > số âm `
+        divResult.innerHTML = `Số dương > Số âm `
     }
     else if (negative > positive) {
         var divResult = document.getElementById("ketQua10")
-        divResult.innerHTML = `Số âm > số dương`
+        divResult.innerHTML = `Số âm > Số dương`
     }
     else {
         var divResult = document.getElementById("ketQua10")
-        divResult.innerHTML = `Số âm = số dương `
+        divResult.innerHTML = `Số âm = Số dương `
     }
 }

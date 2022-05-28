@@ -1,0 +1,38 @@
+div.divTitle:hover{
+    cursor:pointer;
+}
+
+div.divTitle{
+    padding: 10px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.divTitle[aria-expanded="true"] i{
+   transform:rotate(-180deg);
+   transition:all 0.5s
+}
+
+div.divTitle[aria-expanded="false"] i{
+    animation: flip-with-rotate 0.25s linear;
+ }
+
+
+
+#title{
+    display:flex;
+}
+
+
+@keyframes flip-with-rotate {
+ 0%{
+     transform:rotate(-180deg)
+ }
+100%{
+    transform:rotate(-180deg) 0.25s
+}
+
+  
+}
