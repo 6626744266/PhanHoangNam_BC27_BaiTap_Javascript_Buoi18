@@ -29,9 +29,7 @@ function addNumber() {
 function removeNumber() {
     number.pop()
     display(number)
-    var divResult = document.getElementById("arraySpan")
-    divResult.style.display = "inline";
-    divResult.innerHTML = `${number}`
+   
 
 }
 function baiTap1(array) {
@@ -43,7 +41,7 @@ function baiTap1(array) {
 
     }
     var divResult = document.getElementById("ketQua1");
-    divResult.innerHTML = total;
+    divResult.innerHTML =`Tổng số nguyên dương: ${total}`;
 }
 
 function baiTap2(array) {
