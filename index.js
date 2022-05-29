@@ -29,7 +29,7 @@ function addNumber() {
 function removeNumber() {
     number.pop()
     display(number)
-   
+
 
 }
 function baiTap1(array) {
@@ -41,7 +41,7 @@ function baiTap1(array) {
 
     }
     var divResult = document.getElementById("ketQua1");
-    divResult.innerHTML =`Tổng số nguyên dương: ${total}`;
+    divResult.innerHTML = `Tổng số nguyên dương: ${total}`;
 }
 
 function baiTap2(array) {
@@ -57,9 +57,16 @@ function baiTap2(array) {
 
 function baiTap3(array) {
     var min = array[0]
-    for (i = 0; i < array.length; i++) {
-        if (array[i] < min) {
-            min = array[i]
+    if (array.length === 0) {
+        var divResult = document.getElementById("ketQua3");
+        divResult.innerHTML = `Số nhỏ nhất:`;
+        return;
+    }
+    else {
+        for (i = 0; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i]
+            }
         }
     }
     var divResult = document.getElementById("ketQua3");
@@ -91,10 +98,16 @@ function baiTap4(array) {
 }
 
 function baiTap5(array) {
-    var lastEvenNumber = array[0]
-    for (i = 0; i < array.length; i++) {
-        if (array[i] % 2 == 0) {
-            lastEvenNumber = array[i]
+    if (array.length === 0) {
+        var divResult = document.getElementById("ketQua5");
+        divResult.innerHTML = `Số chẵn cuối cùng:`;
+        return;
+    } else {
+
+        for (i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0) {
+                lastEvenNumber = array[i]
+            }
         }
     }
     var divResult = document.getElementById("ketQua5");
