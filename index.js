@@ -1,13 +1,5 @@
 var number = []
 var number2 = []
-init()
-init2()
-function init() {
-    number = JSON.parse(localStorage.getItem("number")) || [];
-}
-function init2() {
-    number2 = JSON.parse(localStorage.getItem("number2")) || [];
-}
 
 
 function display(array) {
@@ -16,12 +8,12 @@ function display(array) {
     baiTap3(array)
     baiTap4(array)
     baiTap5(array)
+    baiTap8(array)
+    baiTap10(array)
     var divResult = document.getElementById("arraySpan")
     divResult.style.display = "inline";
     divResult.innerHTML = `${array}`
 
-    baiTap8(array)
-    baiTap10(array)
 }
 function addNumber() {
     var numberAdd = +document.getElementById("getNumber").value;
@@ -31,7 +23,6 @@ function addNumber() {
     var divResult = document.getElementById("arraySpan")
     divResult.style.display = "inline";
     divResult.innerHTML = `${number}`
-    localStorage.setItem('number', JSON.stringify(number));
 
 }
 
@@ -41,7 +32,6 @@ function removeNumber() {
     var divResult = document.getElementById("arraySpan")
     divResult.style.display = "inline";
     divResult.innerHTML = `${number}`
-    localStorage.setItem('number', JSON.stringify(number));
 
 }
 function baiTap1(array) {
@@ -125,7 +115,6 @@ function baiTap6() {
 
     var divResult = document.getElementById("ketQua6")
     divResult.innerHTML = ` Mảng sau khi đổi: ${number}`
-    localStorage.setItem('number', JSON.stringify(number));
     display(number)
 
 }
@@ -134,7 +123,6 @@ function baiTap7() {
     number.sort(compare)
     var divResult = document.getElementById("ketQua7")
     divResult.innerHTML = ` Mảng sau khi sắp xếp: ${number}`
-    localStorage.setItem('number', JSON.stringify(number));
     display(number)
 }
 function compare(a, b) {
@@ -156,7 +144,7 @@ function baiTap8() {
         return 0;
     }
     var divResult = document.getElementById("ketQua8");
-    divResult.innerHTML = `Số nguyên tố đàu tiên: ${primeArray}`;
+    divResult.innerHTML = `Số nguyên tố đầu tiên: ${primeArray}`;
 }
 
 
@@ -188,7 +176,6 @@ function addNumber2() {
     var divResult = document.getElementById("arraySpan2")
     divResult.style.display = "inline";
     divResult.innerHTML = `${number2}`
-    localStorage.setItem('number2', JSON.stringify(number2));
 
 }
 
